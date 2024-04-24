@@ -25,11 +25,11 @@ const int main(int argc, const char **argv)
         long double xf = safe_get(argv[5]);
 
         long double result = y1 + (((xf - x1) * (y2 - y1)) / (x2 - x1));
-        printf("yf: %Lf", result);
+        printf("yf: %Lf\n", result);
     }
     else
     {
-        printf("%s", "Useage is linterp x1 y1 x2 y2 xf");
+        printf("%s", "Useage is linterp x1 y1 x2 y2 xf\n");
     }
     return EXIT_SUCCESS;
 }
