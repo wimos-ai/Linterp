@@ -1,0 +1,2 @@
+# Linterp
+Linear Interpolation utility
