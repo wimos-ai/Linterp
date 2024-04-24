@@ -7,7 +7,7 @@ long double safe_get(const char *ptr)
     long double value = strtold(ptr, &endptr);
     if (value == 0.0 && endptr == ptr)
     {
-        printf("%s could not be interperted as a float", ptr);
+        printf("%s could not be interperted as a float\n", ptr);
         exit(EXIT_FAILURE);
     }
 
@@ -26,10 +26,12 @@ const int main(int argc, const char **argv)
 
         long double result = y1 + (((xf - x1) * (y2 - y1)) / (x2 - x1));
         printf("yf: %Lf\n", result);
+        return EXIT_SUCCESS;
     }
     else
     {
         printf("%s", "Useage is linterp x1 y1 x2 y2 xf\n");
+        return EXIT_FAILURE;
     }
-    return EXIT_SUCCESS;
+    
 }
